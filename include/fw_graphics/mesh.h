@@ -1,11 +1,11 @@
 #pragma once
 #include <vector>
 
-#include <fw_graphics/vertex_array.h>
-#include <fw_graphics/vertex_buffer.h>
-#include <fw_graphics/index_buffer.h>
-#include <fw_graphics/shader.h>
-#include <fw_graphics/vertex.h>
+#include "fw_graphics/vertex_array.h"
+#include "fw_graphics/vertex_buffer.h"
+#include "fw_graphics/index_buffer.h"
+#include "fw_graphics/shader.h"
+#include "fw_graphics/vertex.h"
 
 namespace Fw::Graphics::Meshes
 {

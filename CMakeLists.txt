@@ -1,8 +1,6 @@
 cmake_minimum_required (VERSION 3.20)
 project(fw_graphics)
 
-
-
 add_library(fw_graphics)
 target_sources(fw_graphics PRIVATE
     "src/index_buffer.cpp"
