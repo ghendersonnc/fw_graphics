@@ -2,11 +2,11 @@
 #include <cstdint>
 namespace Fw::Graphics
 {
-    struct Vertex
+    struct Vertexi8
     {
         float colorValue[3];
         int8_t vertexPosition[2];
 
-        Vertex(int8_t x, int8_t y, float r = 1.0f, float g = 1.0f, float b = 1.0f);
+        Vertexi8(int8_t x, int8_t y, float r = 1.0f, float g = 1.0f, float b = 1.0f);
     };
 }
