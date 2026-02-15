@@ -47,6 +47,3 @@ bool Fw::Graphics::Mesh::canDraw(std::vector<T>& vertices) {
 }
 template bool Fw::Graphics::Mesh::canDraw(std::vector<Vertexi8>& vertices);
 template bool Fw::Graphics::Mesh::canDraw(std::vector<Vertexf>& vertices);
-void Fw::Graphics::Mesh::draw() const {
-    glDrawElements(GL_TRIANGLES, _elementCount, GL_UNSIGNED_INT, nullptr);
-}

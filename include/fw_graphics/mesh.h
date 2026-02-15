@@ -7,6 +7,7 @@
 #include "fw_graphics/vertex_buffer.h"
 #include "fw_graphics/index_buffer.h"
 #include "fw_graphics/shader.h"
+#include "fw_graphics/renderer2d.h"
 
 namespace Fw::Graphics
 {
@@ -16,7 +17,7 @@ namespace Fw::Graphics
         Mesh() = default;
         Mesh(const Mesh&) = default;
         virtual ~Mesh() = default;
-        virtual void drawElements(Shader& shader) = 0;
+        virtual void drawElements(Shader& shader, Graphics::Renderer2D& renderer) = 0;
     protected:
         glm::mat4 _projectionMatrix;
         VertexArray _vertexArray;
@@ -31,7 +32,6 @@ namespace Fw::Graphics
 
         template<typename T>
         void handleBuffersAndArrays(const std::vector<T>& vertices);
-        void draw() const;
     private:
         bool _canDraw = false;
     };
