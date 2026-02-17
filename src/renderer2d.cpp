@@ -8,9 +8,8 @@ void Fw::Graphics::Renderer2D::clear() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void Fw::Graphics::Renderer2D::draw(const int elementCount, VertexArray& vao, IndexBuffer& ebo, const Shader& shader) {
+void Fw::Graphics::Renderer2D::draw(const int elementCount, VertexArray& vao, const Shader& shader) {
     shader.use();
     vao.bind();
-    ebo.bind();
     glDrawElements(GL_TRIANGLES, elementCount, GL_UNSIGNED_INT, nullptr);
 }

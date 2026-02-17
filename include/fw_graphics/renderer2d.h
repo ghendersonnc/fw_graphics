@@ -10,7 +10,7 @@ namespace Fw::Graphics
     public:
         Renderer2D() = default;
         void clear();
-        void draw(const int elementCount, VertexArray& vao, IndexBuffer& ebo, const Shader& shader);
+        void draw(const int elementCount, VertexArray& vao, const Shader& shader);
 
     };
 }
