@@ -12,6 +12,8 @@ void Fw::Graphics::Mesh::handleBuffersAndArrays(const std::vector<T>& vertices) 
     const long long indexBufferSize = static_cast<long long>(sizeof(int)) * static_cast<GLsizeiptr>(_indices.size());
     _vertexBuffer.setData(vertices, vertexBufferSize);
     _indexBuffer.setData(_indices, indexBufferSize);
+    
+    this->emptyIndexVector();
 
     const auto vertexPositionOffset = reinterpret_cast<void*>(offsetof(T, vertexPosition));
     const auto colorValueOffset = reinterpret_cast<void*>(offsetof(T, colorValue));
@@ -47,3 +49,8 @@ bool Fw::Graphics::Mesh::canDraw(std::vector<T>& vertices) {
 }
 template bool Fw::Graphics::Mesh::canDraw(std::vector<Vertexi8>& vertices);
 template bool Fw::Graphics::Mesh::canDraw(std::vector<Vertexf>& vertices);
+
+void Fw::Graphics::Mesh::emptyIndexVector() {
+    _indices.clear();
+    _indices.shrink_to_fit();
+}

@@ -32,6 +32,8 @@ namespace Fw::Graphics
 
         template<typename T>
         void handleBuffersAndArrays(const std::vector<T>& vertices);
+
+        void emptyIndexVector();
     private:
         bool _canDraw = false;
     };
