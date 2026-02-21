@@ -13,3 +13,15 @@ void Fw::Graphics::Renderer2D::draw(const int elementCount, VertexArray& vao, co
     vao.bind();
     glDrawElements(GL_TRIANGLES, elementCount, GL_UNSIGNED_INT, nullptr);
 }
+
+void Fw::Graphics::Renderer2D::wireframeToggle() {
+    if (isWireFrame)
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        isWireFrame = false;
+    } else
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        isWireFrame = true;
+    }
+}

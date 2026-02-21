@@ -8,9 +8,13 @@ namespace Fw::Graphics
     class Renderer2D
     {
     public:
+        bool isWireFrame = false;
+        
         Renderer2D() = default;
         void clear();
         void draw(const int elementCount, VertexArray& vao, const Shader& shader);
+        void wireframeToggle();
+
 
     };
 }
