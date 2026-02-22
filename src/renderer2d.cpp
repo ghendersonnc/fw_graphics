@@ -25,3 +25,7 @@ void Fw::Graphics::Renderer2D::wireframeToggle() {
         isWireFrame = true;
     }
 }
+
+void Fw::Graphics::Renderer2D::addOrthographicCamera(float left, float right, float bottom, float top) {
+    cameras.try_emplace("main", left, right, bottom, top);
+}

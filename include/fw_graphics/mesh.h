@@ -19,7 +19,6 @@ namespace Fw::Graphics
         virtual ~Mesh() = default;
         virtual void drawElements(Shader& shader, Graphics::Renderer2D& renderer) = 0;
     protected:
-        glm::mat4 _projectionMatrix;
         VertexArray _vertexArray;
         VertexBuffer _vertexBuffer;
 

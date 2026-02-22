@@ -11,6 +11,7 @@ target_sources(fw_graphics PRIVATE
     "src/vertex_int8.cpp"
     "src/vertex_f.cpp"
     "src/renderer2d.cpp"
+    "src/camera.cpp"
 )
 target_include_directories(fw_graphics PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(fw_graphics PUBLIC
