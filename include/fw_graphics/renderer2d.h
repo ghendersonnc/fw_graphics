@@ -11,6 +11,7 @@ namespace Fw::Graphics
     {
     public:
         std::unordered_map<std::string, Camera> cameras;
+        std::string rendererInfo;
         bool isWireFrame = false;
         
         Renderer2D() = default;
@@ -18,7 +19,7 @@ namespace Fw::Graphics
         void draw(int elementCount, VertexArray& vao, const Shader& shader);
         void wireframeToggle();
         void addOrthographicCamera(float left, float right, float bottom, float top);
-
+        static std::string getRendererInfo();
 
     };
 }

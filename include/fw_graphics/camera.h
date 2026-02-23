@@ -10,6 +10,7 @@ namespace Fw::Graphics
         glm::mat4 projectionMatrix;
         glm::mat4 viewMatrix;
         std::pair<float, float> position;
+        float scaleFactor;
         uint16_t id;
         Camera(float left, float right, float bottom, float top);
         ~Camera();

@@ -9,6 +9,7 @@ Fw::Graphics::Camera::Camera(const float left, const float right, const float bo
     projectionMatrix = glm::ortho(left, right, bottom, top, -1.0f, 1.0f);
     position = { 0.f, 0.f };
     id = _nextId;
+    scaleFactor = 12;
     _nextId++;
 }
 
